@@ -1,20 +1,30 @@
 body {
     font: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 #container {
-    width: 1050px;
-    /* border: 1px solid grey; */
+    width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
+/* ------------------------ HEADER ------------------------ */
 #header {
-    height: 100px;
     padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #brand {
-    float: left;
+    flex: 50%;
 }
 
 h1 a {
@@ -25,15 +35,17 @@ h1 a {
 }
 
 #searchBox {
-    float: right;
+    flex: 50%;
     background: linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
     background: -webkit-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
     background: -o-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
     background: -moz-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
-    width: 400px;
-    height: 50px;
-    padding: 20px 20px 0 20px;
-    margin-top: 20px;
+    min-width: 400px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .text {
@@ -52,37 +64,45 @@ h1 a {
     color: white;
     background: black;
     font-size: 15px;
+    margin-left: 20px;
 }
 
 .clear {
     clear: both;
 }
 
+/* ------------------------ MENU BAR ------------------------ */
 #menu {
-    height: 70px;
     background: linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
     background: -webkit-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
     background: -o-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
     background: -moz-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
-    padding: 7px 0;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-ul {
-    list-style: none;
+@media screen and (max-width: 700px) {
+    #menu {
+        flex-direction: column;
+        align-content: center;
+    }
+    #menu a:any-link {
+        border-right: none;
+    }
 }
 
-#menu ul li {
-    float: left;
+#menu a {
     padding: 0 30px;
     height: 30px;
     border-right: 1px solid blue;
 }
 
-#menu ul li:last-child {
+#menu a:last-child {
     border-right: none;
 }
 
-#menu ul li a {
+#menu a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 17px;
@@ -95,12 +115,13 @@ ul {
     transition: font-size 0.3s ease;
 }
 
-#menu ul li a:hover, #menu ul li a.active {
+#menu a:hover, #menu a.active {
     font-size: 20px;
     font-weight: bold;
     color: blue;
 }
 
+/* ------------------------ INTRODUCTION ------------------------ */
 #introduction {
     background: linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
     background: -webkit-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
@@ -122,9 +143,20 @@ ul {
     text-align: justify;
 }
 
+/* ------------------------ SIDEBAR ------------------------ */
+.sidebars {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebarWrapper {
+    padding: 5px;
+    flex: 50%;
+}
+
 .sidebar {
-    height: 500px;
-    width: 450px;
+    height: 100%;
+    width: 100%;
     border: 2px solid black;
     border-radius: 20px;
     padding: 20px 0 80px 50px;
@@ -167,14 +199,7 @@ ul {
     font-weight: bold;
 }
 
-#leftsidebar {
-    float: left;
-}
-
-#rightsidebar {
-    float: right;
-}
-
+/* ------------------------ FOOTER ------------------------ */
 .footer {
     height: 60px;
     background: linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
@@ -182,5 +207,5 @@ ul {
     background: -o-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
     background: -moz-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
     padding: 10px 30px;
-    margin-top: 61%;
+    margin-top: 15px;
 }
