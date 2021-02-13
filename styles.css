@@ -1,6 +1,10 @@
+body {
+    font: Arial, Helvetica, sans-serif;
+}
+
 #container {
     width: 1050px;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     margin: 0 auto;
 }
 
@@ -23,6 +27,9 @@ h1 a {
 #searchBox {
     float: right;
     background: linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    background: -webkit-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    background: -o-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    background: -moz-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
     width: 400px;
     height: 50px;
     padding: 20px 20px 0 20px;
@@ -35,6 +42,7 @@ h1 a {
     padding: 5px;
     font-size: 15px;
     background: white url(img/search.png) right center no-repeat;
+    border: 1px solid black
 }
 
 .submit {
@@ -53,6 +61,9 @@ h1 a {
 #menu {
     height: 70px;
     background: linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    background: -webkit-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    background: -o-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    background: -moz-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
     padding: 7px 0;
 }
 
@@ -88,4 +99,88 @@ ul {
     font-size: 20px;
     font-weight: bold;
     color: blue;
+}
+
+#introduction {
+    background: linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    background: -webkit-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    background: -o-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    background: -moz-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    padding: 30px;
+    margin: 16px 0;
+}
+
+#introduction h3 {
+    font-size: 45px;
+    color: white;
+    font-weight: normal;
+}
+
+#introduction p {
+    font-size: 25px;
+    color: black;
+    text-align: justify;
+}
+
+.sidebar {
+    height: 500px;
+    width: 450px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px 0 80px 50px;
+}
+
+.sidebar h3 {
+    color:black;
+    font-size: 30px;
+}
+
+.sidebar ul {
+    padding-top: 8px;
+}
+
+#leftsidebar ul li {
+    padding: 4px 0 4px 10px;
+    list-style-image: url(img/arrow.png);
+}
+
+#rightsidebar ul li {
+    padding: 17px 10px 10px 40px;
+    list-style-image: url(img/tick.png);
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: blue;
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    text-decoration: none;
+    color: blueviolet;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+#leftsidebar {
+    float: left;
+}
+
+#rightsidebar {
+    float: right;
+}
+
+.footer {
+    height: 60px;
+    background: linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    background: -webkit-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    background: -o-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    background: -moz-linear-gradient(rgb(65, 145, 165), rgb(26, 140, 185));
+    padding: 10px 30px;
+    margin-top: 61%;
 }
